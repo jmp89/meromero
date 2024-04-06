@@ -22,7 +22,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80dvw;
+  width: fit-content;
   height: fit-content;
   padding: 2rem;
   box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.75);
@@ -40,8 +40,5 @@ h1 {
 @media (max-width: 520px) {
   * {
     font-size: 12px;
-  }
-  .main-container {
-    width: fit-content;
   }
 }
