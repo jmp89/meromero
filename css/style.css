@@ -198,6 +198,7 @@ li::before {
   * {
     font-size: 14px;
     flex-wrap: wrap;
+          flex-direction: column;
   }
 
   header {
