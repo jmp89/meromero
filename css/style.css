@@ -1,44 +1,227 @@
+/* 
+///   HEADER:
+        background #edd0d6
+        h1 Brice SemiExpanded
+        h1: #D9462C
+        h2: #1C402E
+      OTROS:
+        TT Norms
+        #edb5d7
+        Open Sans
+ */
+@font-face {
+  font-family: Brice;
+  src: url("../fonts/brice-regular-semiexpanded.otf");
+}
+@font-face {
+  font-family: TT Norms;
+  src: url("../fonts/tt_norms_pro_regular.otf");
+}
 * {
   box-sizing: border-box;
   font-size: 16px;
   margin: 0;
   padding: 0;
+  color: #1c402e;
+  font-family: TT Norms;
 }
 body {
-  background-color: hsla(286, 53%, 43%, 1);
-}
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background-color: #ffff;
 }
 
-.main-container {
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 30px;
+header {
+  background-color: #edd0d6;
+}
+
+header,
+main {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+}
+
+main {
+  flex-direction: column;
   align-items: center;
-  width: fit-content;
-  height: fit-content;
-  padding: 2rem;
-  box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.75);
+}
+
+section {
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  padding: 100px 100px 0 100px;
+  max-width: 1160px;
+  max-height: 600px;
+}
+
+header section {
+  background-color: #edd0d6;
+}
+
+.header-text {
+  width: 60%;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  font-family: Brice;
+  font-size: 2.7rem;
+}
+a {
+  text-decoration: none;
+}
+.header-text i img {
+  border-radius: 0;
+  max-width: 40px;
+  max-height: 40px;
+  margin-top: 1.5rem;
+  margin-right: 1.2rem;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
+  color: #d9462c;
+  margin-bottom: 2rem;
+}
+
+header img {
+  border-radius: 40px;
+  max-height: 680px;
+  height: 85%;
+  object-fit: cover;
+  align-self: start;
+}
+
+header hr {
+  border-top: dotted;
+  margin: 0.5rem 2rem 1.9rem 0;
+}
+
+.main-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  padding: 2.5rem 2rem;
+}
+
+.main-container h2 {
+  font-size: 1.8rem;
   text-align: center;
 }
 
-.main-container p {
-  font-size: 1.5rem;
+.main-container div {
+  display: flex;
+  align-items: end;
+  gap: 3rem;
+  margin-bottom: 2rem;
 }
 
-@media (max-width: 520px) {
+li {
+  list-style: none;
+  list-style-position: inside;
+  line-height: 2rem;
+}
+
+li::before {
+  content: "";
+  display: inline-block;
+  margin-right: 0.5rem;
+  height: 1.3rem;
+  width: 1.3rem;
+  background-size: 1.3rem;
+  background-image: url("../img/whatsapp-black.png");
+  background-repeat: no-repeat;
+}
+
+#emoteCry {
+  max-width: 35%;
+  max-height: 200px;
+}
+
+.main-container p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.pink-container {
+  position: relative;
+  background-color: #edb5d7;
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.pink-content {
+  position: relative;
+  max-width: 1160px;
+  width: 100%;
+  padding: 100px 100px 0 100px;
+  display: flex;
+}
+
+.pink-content img:first-child {
+  max-width: 150px;
+  max-height: 150px;
+  position: absolute;
+  right: -1.4rem;
+  top: 0rem;
+}
+
+.pink-container div:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pink-container img:nth-child(2) {
+  max-width: 13rem;
+}
+.pink-content div p:nth-child(1) {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.pink-container span {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+/* 
+//////////////////////////////////////////////////
+///////////////// MEDIA QUERY
+//////////////////////////////////////////////////
+*/
+
+@media (max-width: 750px) {
   * {
-    font-size: 12px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  header {
+    align-content: center;
+    justify-content: start;
+    gap: 10px;
+    height: 1000px;
+    position: relative;
+  }
+
+  header section {
+    padding: 1.5rem;
+    position: absolute;
+    height: 100%;
+  }
+
+  .header-text {
+    width: 100%;
+  }
+
+  header img {
+    max-width: 350px;
+    max-height: 650px;
+    width: 90%;
+    height: auto;
   }
 }
