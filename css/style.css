@@ -11,6 +11,7 @@
  */
 @font-face {
   font-family: Brice;
+  font-weight: 700;
   src: url("../fonts/brice-regular-semiexpanded.otf");
 }
 @font-face {
@@ -49,7 +50,7 @@ section {
   align-content: flex-start;
   justify-content: center;
   gap: 2rem;
-  padding: 100px 100px 0 100px;
+  padding: 3rem 100px 0 100px;
   max-width: 1160px;
   max-height: 600px;
 }
@@ -122,18 +123,24 @@ header hr {
 li {
   list-style: none;
   list-style-position: inside;
-  line-height: 2rem;
+  line-height: 2.2rem;
+  position: relative;
 }
 
 li::before {
   content: "";
   display: inline-block;
-  margin-right: 0.5rem;
-  height: 1.3rem;
-  width: 1.3rem;
-  background-size: 1.3rem;
-  background-image: url("../img/whatsapp-black.png");
+  position: absolute;
+  height: 1.9rem;
+  width: 1.9rem;
+  background-size: 2rem;
   background-repeat: no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -2.5rem;
+}
+.main-container li::before {
+  background-image: url("../img/li_sadface.png");
 }
 
 #emoteCry {
@@ -158,24 +165,28 @@ li::before {
   position: relative;
   max-width: 1160px;
   width: 100%;
-  padding: 100px 100px 0 100px;
+  padding: 3rem 100px 2.5rem 100px;
   display: flex;
 }
 
 .pink-content img:first-child {
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 250px;
+  max-height: 250px;
   position: absolute;
   right: -1.4rem;
-  top: 0rem;
+  top: -5rem;
 }
 
-.pink-container div:nth-child(2) {
+.pink-content div:nth-child(2) {
   display: flex;
   flex-wrap: wrap;
 }
-.pink-container img:nth-child(2) {
+.pink-content img:nth-child(2) {
   max-width: 13rem;
+}
+.pink-content div p {
+  margin-bottom: 1rem;
+  margin-left: 1.3rem;
 }
 .pink-content div p:nth-child(1) {
   width: 100%;
@@ -183,33 +194,92 @@ li::before {
   font-size: 1.2rem;
   text-align: center;
 }
+.pink-content div p:nth-child(2),
+.pink-content div p:nth-child(3) {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: left;
+}
 .pink-container span {
   font-size: 0.7rem;
   font-weight: 400;
 }
+.yo-soy-tengo {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.yo,
+.soy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
 
+.yo li::before {
+  background-image: url("../img/index-up.png");
+}
+span {
+  font-weight: bold;
+}
+h3 {
+  font-family: Brice;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  overflow: hidden;
+  width: 20%;
+  height: auto;
+  position: relative;
+}
+
+.btn img {
+  width: 100%;
+  height: 100%;
+}
+.btn span {
+  font-family: Open Sans;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
 /* 
 //////////////////////////////////////////////////
 ///////////////// MEDIA QUERY
 //////////////////////////////////////////////////
 */
 
-@media (max-width: 750px) {
+/* @media (max-width: 750px) {
   * {
     font-size: 14px;
-    flex-wrap: wrap;
-          flex-direction: column;
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
 
   header {
     align-content: center;
     justify-content: start;
     gap: 10px;
-    height: 1000px;
+    height: 900px;
     position: relative;
   }
 
-  header section {
+  section {
     padding: 1.5rem;
     position: absolute;
     height: 100%;
@@ -225,4 +295,4 @@ li::before {
     width: 90%;
     height: auto;
   }
-}
+} */
