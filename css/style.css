@@ -14,17 +14,14 @@
   font-weight: 700;
   src: url("../fonts/brice-regular-semiexpanded.otf");
 }
-@font-face {
-  font-family: TT Norms;
-  src: url("../fonts/tt_norms_pro_regular.otf");
-}
+
 * {
   box-sizing: border-box;
   font-size: 16px;
   margin: 0;
   padding: 0;
   color: #1c402e;
-  font-family: TT Norms;
+  font-family: "Roboto Slab", serif;
 }
 body {
   background-color: #ffff;
@@ -229,7 +226,8 @@ h3 {
   font-family: Brice;
   font-size: 2.8rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .btn {
@@ -241,6 +239,7 @@ h3 {
   width: 20%;
   height: auto;
   position: relative;
+  min-width: 190px;
 }
 
 .btn img {
@@ -257,12 +256,28 @@ h3 {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
+  color: #1c402e;
+}
+
+.tengo li {
+  background-color: #ffea9e;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 0 2rem;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  margin-bottom: 1rem;
 }
 /* 
 //////////////////////////////////////////////////
 ///////////////// MEDIA QUERY
 //////////////////////////////////////////////////
-*/
+*
+
+ERRORES: FLEX EN CONTENEDORES ABUELOS
+
+/
 
 /* @media (max-width: 750px) {
   * {
