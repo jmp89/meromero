@@ -69,6 +69,7 @@ h2 {
 }
 a {
   text-decoration: none;
+  height: fit-content;
 }
 .header-text i img {
   border-radius: 0;
@@ -155,7 +156,7 @@ li::before {
   position: relative;
   background-color: #edb5d7;
   max-width: 100%;
-  width: 100%;
+  width: 100vw;
   padding: 0;
 }
 
@@ -330,7 +331,7 @@ footer section {
   max-height: 9rem;
   position: absolute;
   z-index: -1;
-  left: 9rem;
+  left: 15%;
   top: 7.8rem;
 }
 
@@ -362,48 +363,96 @@ footer nav img {
 #footer-social-media {
   padding-top: 1rem;
 }
+
+#footer-social-media img {
+  height: 5.5rem;
+}
 /* 
 //////////////////////////////////////////////////
 ///////////////// MEDIA QUERY
 //////////////////////////////////////////////////
-*
+*/
 
-ERRORES: FLEX EN CONTENEDORES ABUELOS
+@media /*(min-width: 651px) and */(max-width: 1000px) {
+  * {
+    font-size: 15px;
+  }
+  header {
+    width: 100vw;
+  }
+  ul,
+  .more-about-me {
+    margin-left: 2rem;
+  }
+  section {
+    padding: 2rem 1rem 0 1rem;
+    gap: 1rem;
+  }
+  .yo ul {
+    padding: 0 2rem;
+  }
+  .more-about-me {
+    position: relative;
+    max-width: 1160px;
+    width: 100%;
+    padding: 3rem 1rem;
+  }
+  #avatar {
+    max-height: 6rem;
+    left: 2rem;
+  }
+  .pink-content {
+    padding: 2rem;
+  }
+}
 
-/
-
-/* @media (max-width: 750px) {
+@media (max-width: 650px) {
   * {
     font-size: 14px;
-    flex-wrap: nowrap;
+  }
+  header,
+  main,
+  section,
+  div {
     flex-direction: column;
-  }
-
-  header {
     align-content: center;
-    justify-content: start;
-    gap: 10px;
-    height: 900px;
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
   }
-
-  section {
-    padding: 1.5rem;
-    position: absolute;
-    height: 100%;
-  }
-
   .header-text {
+    display: flex;
     width: 100%;
+    align-content: center;
+    justify-content: center;
   }
+  hr {
+    width: 80%;
+  }
+  #emoteCry {
+    align-self: center;
+  }
+  .pink-content img:first-child {
+    max-width: 200px;
+    max-height: 200px;
+    right: -3rem;
+    top: -5rem;
+  }
+  #avatar {
+    max-height: 4rem;
+    left: 3px;
+  }
+  footer,
+  footer * {
+    justify-content: center;
+  }
+}
 
-  header img {
-    max-width: 350px;
-    max-height: 650px;
-    width: 90%;
-    height: auto;
-  }
-} */
+/* 
+//////////////////////////////////////////////////
+///////////////// ANIMACIONES
+//////////////////////////////////////////////////
+*/
 
 @keyframes zoomIn {
   from {
