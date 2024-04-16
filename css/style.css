@@ -25,6 +25,7 @@
 }
 body {
   background-color: #ffff;
+  min-height: 100dvh;
 }
 
 header {
@@ -367,6 +368,16 @@ footer nav img {
 #footer-social-media img {
   height: 5.5rem;
 }
+
+.show {
+  opacity: 1 !important;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1.5s;
+}
+
 /* 
 //////////////////////////////////////////////////
 ///////////////// MEDIA QUERY
